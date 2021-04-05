@@ -69,3 +69,15 @@ footer {
   background-color: black;
   padding-bottom: 1rem;
 }
+
+@media screen and (min-width: 300px) and (max-width: 1000px) {
+  header {
+    background-color: blue;
+  }
+  p {
+    color: white;
+  }
+  body {
+    background-image: url(images/captainAmericaLogo.jpg);
+  }
+}
