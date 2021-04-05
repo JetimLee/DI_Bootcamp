@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Train One", cursive;
+}
+
+.modelCard {
+  display: inline-block;
+  position: relative;
+  padding: 1.8rem;
+}
+
+.modelCard1 {
+  float: left;
+}
+.modelCard2 {
+  float: left;
+}
+.modelCard3 {
+  float: right;
+}
+.modelCard4 {
+  float: right;
+}
+
+.model {
+  width: 20rem;
+  height: 20rem;
+}
+
+.buttonArea {
+  width: 20rem;
+  height: 10rem;
+  background-color: grey;
+}
+
+.icon {
+  height: 3.5rem;
+  width: 3.5rem;
+  position: absolute;
+}
+
+button {
+  position: absolute;
+  bottom: 100px;
+  left: 130px;
+  width: 100px;
+  height: 50px;
+  background-color: #f29f05;
+  border-radius: 10%;
+}
+
+span {
+  color: black;
+  font-family: "Train One", cursive;
+}
+
+.cart {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  right: 160px;
+  top: 160px;
+  background-color: black;
+}
+
+.viewingEye {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 160px;
+  left: 140px;
+}
+
+.wishlist {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 160px;
+  right: 120px;
+}
+
+.hoveringIcons {
+  display: none;
+}
+
+.showHoveringIcons:hover .hoveringIcons {
+  display: contents;
+}
