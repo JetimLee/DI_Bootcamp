@@ -17,6 +17,7 @@
 .flexContainer {
   display: flex;
   flex-direction: column;
+  border: black 5px solid;
 }
 
 .centeringDiv {

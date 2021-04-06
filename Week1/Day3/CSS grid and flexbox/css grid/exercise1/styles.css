@@ -1,0 +1,25 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 10% 40%;
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 5rem;
+  row-gap: 5rem;
+}
+
+.box1 {
+  background-color: red;
+  height: 5em;
+  border: black 3px solid;
+}
+
+.box2 {
+  background-color: lightblue;
+  height: 5rem;
+  border: black 3px solid;
+}
+.box3 {
+  background-color: yellow;
+  height: 5rem;
+  grid-column: 1/3;
+  border: black 3px solid;
+}

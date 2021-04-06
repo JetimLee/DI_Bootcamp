@@ -1,0 +1,46 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-color: grey;
+  width: 100vh;
+  border: black solid 1px;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.box1 {
+  height: 5rem;
+  width: 10rem;
+  background-color: blue;
+}
+.box2 {
+  height: 5rem;
+  width: 10rem;
+  background-color: red;
+}
+.box3 {
+  height: 5rem;
+  width: 10rem;
+
+  background-color: yellow;
+}
+
+.box4 {
+  height: 5rem;
+  width: 10rem;
+
+  background-color: purple;
+}
+.box5 {
+  height: 5rem;
+  width: 10rem;
+
+  background-color: orange;
+}
+.box6 {
+  height: 5rem;
+  width: 10rem;
+
+  background-color: green;
+}
