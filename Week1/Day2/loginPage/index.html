@@ -4,21 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
+    <title>Login Form</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
-      <div class="loginContainer">
-        <h1>Login</h1>
-        <div>
+      <div class="loginContainer signIn">
+        <div class="centeredGreeting">
+          <h1>Login</h1>
+        </div>
+        <div class="loginForm">
           <form action="">
-            <input type="email" placeholder="Enter your email..." />
+            <input type="text" placeholder="enter your username..." />
+            <input type="password" placeholder="enter your password..." />
           </form>
+          <div class="forgotPasswordArea">
+            <label for="">Remember me</label>
+            <input type="checkbox" name="" id="" />
+            <a href="#">Forgot password?</a>
+          </div>
+          <div class="container"><button>Login</button></div>
+          <div class="navigationArea">
+            <div class="centeredGreeting">Or connect with</div>
+            <nav>
+              <ul>
+                <li>
+                  <img
+                    class="icon"
+                    src="images/facebookiconfromsapir.png"
+                    alt="facebook icon"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="icon"
+                    src="images/githubRoundedSquare.png"
+                    alt="github icon"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="icon"
+                    src="images/instagramiconfromsapir.png"
+                    alt="instagram icon"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="icon"
+                    src="images/Twitter social icons - rounded square - blue.png"
+                    alt="Twitter icon"
+                  />
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
-      <div class="loginContainer">
-        <h1>Hello friend, it's good to see you!</h1>
+      <div class="greetingArea">
+        <div class="loginContainer login">
+          <div>
+            <img class="icon" src="images/githubRoundedSquare.png" alt="" />
+          </div>
+          <div class="centeredGreeting">
+            <h1>Hello friend!</h1>
+          </div>
+          <div class="loginForm">
+            <form action="">
+              <input type="text" placeholder="enter your username..." />
+              <input type="password" placeholder="enter your password..." />
+            </form>
+            <div class="forgotPasswordArea">
+              <p>Enter your details and start journeying!</p>
+            </div>
+            <div class="container"><button>Register</button></div>
+            <div class="navigationArea"></div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
