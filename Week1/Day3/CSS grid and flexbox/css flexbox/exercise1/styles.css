@@ -1,0 +1,31 @@
+.box1 {
+  background-color: red;
+  height: 10rem;
+}
+
+.box2 {
+  background-color: blue;
+  height: 10rem;
+  width: 20rem;
+}
+
+.box3 {
+  background-color: yellow;
+  height: 10rem;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.centeringDiv {
+  display: flex;
+  justify-content: center;
+  margin: 7rem;
+}
+
+.endDiv {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,26 @@
+header {
+  background-color: lightblue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100px;
+}
+
+div {
+  display: flex;
+  background-color: pink;
+  flex-direction: row;
+  height: auto;
+  width: 50%;
+  margin-top: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+img {
+  float: left;
+  padding-right: 1rem;
+}
+
+p {
+  text-align: justify;
+}
