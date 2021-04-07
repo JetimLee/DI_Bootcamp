@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  background-color: #05aff2;
+  background-color: #d9d9d9;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -216,5 +216,42 @@ form {
     flex-direction: column;
     border: black 3px solid;
     width: 15rem;
+  }
+}
+
+@media only screen and (device-width: 768px) {
+  * {
+    font-size: large;
+  }
+
+  .contentContainer {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    max-width: fit-content;
+    align-items: center;
+  }
+
+  .contactCard {
+    border: black 3px solid;
+    width: 15rem;
+    height: 15rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .flexWrapper {
+    border: black 3px solid;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+  }
+  .logo {
+    width: auto;
   }
 }
