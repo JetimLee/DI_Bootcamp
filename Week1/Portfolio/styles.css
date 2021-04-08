@@ -99,6 +99,10 @@ a {
   color: black;
 }
 
+.goldText {
+  color: #bf9f63;
+}
+
 /* projects area */
 
 .projectsFlexContainer {
