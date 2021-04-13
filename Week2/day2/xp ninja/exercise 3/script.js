@@ -1,7 +1,7 @@
 let myString = "i love you";
 
 const isVowelRegEx = (string) => {
-  console.log(/[aeiou]/.test(string));
+  console.log(/[aeiou]g/.test(string));
 };
 
 isVowelRegEx(myString);

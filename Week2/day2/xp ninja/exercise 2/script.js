@@ -16,7 +16,7 @@
 // // }
 
 // let zipCode = prompt("please enter your zip code").toLowerCase;
-// let filterforCharacters = /[a-zA-z]/i;
+// let filterforCharacters = /[a-zA-Z]/i;
 
 // if (/\s/.test(zipCode)) {
 //   console.log("failure");
