@@ -10,9 +10,9 @@ const moveBox = () => {
     if (pos == 350) {
       clearInterval(interval); //clearing the interval
     } else {
+      console.log(`the ${counter} is`);
       pos++;
       innerBox.style.left = `${pos}px`;
-      console.log(`the position is ${pos}px`);
     }
   }, 5);
 };
