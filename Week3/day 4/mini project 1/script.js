@@ -2,16 +2,45 @@ const body = document.getElementsByTagName("body")[0];
 
 const clearButton = document.getElementsByTagName("button")[0];
 const colorSelector = document.getElementById("colorSelector");
+const colorOptions = document.querySelectorAll(".colorPicker");
+console.log(colorOptions);
 
 const colorGrid = document.querySelector(".grid2");
 
 const parentContainer = document.querySelector(".parentContainer");
-console.log(parentContainer);
 
-parentContainer.addEventListener("click", () => {
-  console.log("clicked parent");
-});
-let holdColor;
+let backgroundColors = [
+  "peru",
+  "violet",
+  "orange",
+  "lightblue",
+  "purple",
+  "olive",
+  "pink",
+  "salmon",
+  "red",
+  "yellow",
+  "palegreen",
+  "burlywood",
+  "orangered",
+  "seagreen",
+  "slategrey",
+  "sienna",
+  "sandybrown",
+  "brown",
+  "lightseagreen",
+  "lightgreen",
+  "red",
+  "darkblue",
+];
+
+let colors = colorSelector.children;
+
+const assignBackgroundColors = () => {
+  for (let i = 0; i < colors.length - 1; i++) {
+    colorOptions[i].style.backgroundColor = backgroundColors[i];
+  }
+};
 
 //creating the empty boxes
 for (let i = 0; i < 2418; i++) {
@@ -20,9 +49,7 @@ for (let i = 0; i < 2418; i++) {
   colorGrid.appendChild(coloringBoxes);
   coloringBoxes.style.backgroundColor = "white";
   coloringBoxes.addEventListener("click", (e) => {
-    e.stopPropagation();
     e.target.style.backgroundColor = holdColor;
-    console.log("clicked");
   });
 }
 
@@ -33,25 +60,23 @@ const colorTheBoxes = () => {
 const reset = () => {
   for (blank of colorGrid.children) {
     blank.style.backgroundColor = "white";
+    holdColor = "white";
   }
-  console.log("switched");
 };
-
-console.log(colorSelector.children);
-
-let colors = colorSelector.children;
-console.log(`${colors} this is colors`);
+console.log(colorGrid.children);
 
 const colorClick = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     arr[i].addEventListener("click", (e) => {
+      console.log(e.target);
       let bg = e.target.style.backgroundColor;
       holdColor = bg;
-      console.log("clicked");
     });
   }
 };
 
 colorClick(colors);
+
+assignBackgroundColors();
 
 clearButton.addEventListener("click", reset);
