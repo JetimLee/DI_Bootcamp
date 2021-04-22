@@ -2,8 +2,6 @@ let textInput = document.getElementById("inputLetters");
 let textDisplay = document.getElementById("result");
 
 let checkForLetters = /[a-zA-Z]+/g;
-let checkForNonLetters = /\W+/g;
-let checkForNonLetters2 = /^[a-zA-Z]+$/;
 
 const checkInput = () => {
   if (textInput.value.match(checkForLetters)) {
