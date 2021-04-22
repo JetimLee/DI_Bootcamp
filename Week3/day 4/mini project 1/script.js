@@ -42,7 +42,7 @@ const assignBackgroundColors = () => {
 };
 
 //creating the empty boxes
-for (let i = 0; i < 2418; i++) {
+for (let i = 0; i < 2000; i++) {
   let coloringBoxes = document.createElement("div");
   coloringBoxes.classList.add("blankBox");
   colorGrid.appendChild(coloringBoxes);

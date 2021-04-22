@@ -3,6 +3,7 @@
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
 }
 
 .parentContainer {
@@ -24,8 +25,9 @@
 }
 
 .grid2 {
+  height: 100%;
   display: grid;
-  grid-template-columns: repeat(78, 5px);
+  grid-template-columns: repeat(60, 1fr);
   column-gap: 10px;
   row-gap: 10px;
 }
