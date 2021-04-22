@@ -4,7 +4,6 @@ const clearButton = document.getElementsByTagName("button")[0];
 const colorSelector = document.getElementById("colorSelector");
 const colorOptions = document.querySelectorAll(".colorPicker");
 console.log(colorOptions);
-
 const colorGrid = document.querySelector(".grid2");
 
 const parentContainer = document.querySelector(".parentContainer");
@@ -30,7 +29,7 @@ let backgroundColors = [
   "brown",
   "lightseagreen",
   "lightgreen",
-  "red",
+  "white",
   "darkblue",
 ];
 
@@ -52,10 +51,6 @@ for (let i = 0; i < 2418; i++) {
     e.target.style.backgroundColor = holdColor;
   });
 }
-
-const colorTheBoxes = () => {
-  coloringBoxes;
-};
 
 const reset = () => {
   for (blank of colorGrid.children) {
