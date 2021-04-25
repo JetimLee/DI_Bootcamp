@@ -19,6 +19,13 @@ a {
   text-decoration: none;
 }
 
+/*logo section */
+
+.myLogo {
+  width: 20rem;
+  height: 10rem;
+}
+
 .profilepicture {
   max-width: 60%;
   max-height: 60;
