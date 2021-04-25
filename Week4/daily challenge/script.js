@@ -48,3 +48,14 @@ const biggerThan5 = (arr) => {
 };
 
 biggerThan5(gameInfo);
+
+const totalScore = (arr) => {
+  let score = 0;
+  arr.forEach((element) => {
+    console.log(element["score"]);
+    score += element["score"];
+  });
+  console.log(`${score} total score`);
+};
+
+totalScore(gameInfo);
