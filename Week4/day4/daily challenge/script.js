@@ -9,7 +9,9 @@ class Video {
     this.time = time;
   }
   watch() {
-    console.log(`${this.uploader} watched all ${this.time} of ${this.title}`);
+    console.log(
+      `${this.uploader} watched all ${this.time} seconds of ${this.title}`
+    );
   }
 }
 
@@ -33,5 +35,7 @@ class Video {
 
 // Bonus: Loop through the array to instantiate those instances.
 
-let simba = new Video("Simba", "Walt Disney", "90 minutes");
+let simba = new Video("Simba", "Walt Disney", 90);
+let anotherMovie = new Video("Funny vids", "Gavin", "120");
 simba.watch();
+anotherMovie.watch();
