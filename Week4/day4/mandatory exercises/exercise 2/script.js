@@ -15,9 +15,9 @@ const student = {
   last: "Schoppik",
 };
 
-const { first, last } = student;
-
 const displayInfo = (obj) => {
+  const { first, last } = obj;
+
   return `your full name is ${first} ${last}`;
 };
 
