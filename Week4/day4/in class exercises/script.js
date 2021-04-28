@@ -106,4 +106,13 @@ const users = {
 let objectToArray = Object.entries(users);
 console.log(objectToArray);
 
-let mappedArray = objectToArray.map((item) => {});
+let mappedArray = objectToArray.map((item) => {
+  return item[1];
+});
+
+console.log(mappedArray);
+
+let over30 = mappedArray.filter((item) => {
+  return item.age > 30;
+});
+console.log(over30);
