@@ -5,13 +5,22 @@
 }
 
 body {
-  background-color: lightgoldenrodyellow;
+  background-image: url(images/circuit-pattern.png);
 }
 
-header {
+.header2 {
   display: flex;
   justify-content: flex-start;
   background-color: lightgreen;
+  height: 5rem;
+  width: 100%;
+  align-items: center;
+}
+
+input {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .logo {
@@ -49,7 +58,7 @@ p {
 }
 .profileCard {
   margin: 3rem;
-  background-color: lightsteelblue;
+  background-color: lightslategrey;
 }
 
 img {

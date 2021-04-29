@@ -1,7 +1,6 @@
 const parentCardContainer = document.getElementById("masterContainer");
 
-const searchBar = document.getElementsByClassName("searchBar")[0];
-console.log(searchBar);
+const body = document.getElementById("theDamnBody");
 
 const robots = [
   {
@@ -95,8 +94,47 @@ const getEmails = (arr) => {
   });
   return emailSources;
 };
+
+const displayCards = (arr) => {
+  const newDisplay = arr
+    .map((element) => {
+      return `<div class="profileCard">
+          <div class="imageContainer">
+          <img src=${element.image}></img>
+           <div class="nameContainer">
+          <h2>${element.name}</h2>
+          <p>${element.email}</p>
+          </div>
+          </div>
+          </div>`;
+    })
+    .join("");
+  parentCardContainer.innerHTML = newDisplay;
+};
+
+const generateTopArea = () => {
+  const header = document.createElement("header");
+  body.prepend(header);
+  header.classList.add("header2");
+  const logo = document.createElement("div");
+  header.append(logo);
+  logo.classList.add("logo");
+  const robofriends = document.createElement("h2");
+  logo.append(robofriends);
+  robofriends.innerText = "Robofriends";
+  const searchBarDiv = document.createElement("div");
+  header.append(searchBarDiv);
+  const searchThing = document.createElement("input");
+  searchBarDiv.append(searchThing);
+  searchThing.placeholder = "search robots...";
+  searchThing.classList.add("searchBar");
+};
+
 const generateCards = () => {
-  for (i = 0; i < 10; i++) {
+  generateTopArea();
+  const searchBar = document.getElementsByClassName("searchBar")[0];
+  console.log(searchBar);
+  for (i = 0; i < robots.length; i++) {
     let profileCard = document.createElement("div");
     profileCard.classList.add("profileCard");
     parentCardContainer.append(profileCard);
@@ -116,6 +154,15 @@ const generateCards = () => {
     nameContainer.append(emailBlock);
     emailBlock.innerText = getEmails(robots)[i];
   }
+  searchBar.addEventListener("keyup", (e) => {
+    const searchInput = e.target.value;
+    console.log(searchInput);
+    const filteredNames = robots.filter((element) => {
+      return element.name.toLowerCase().includes(searchInput);
+    });
+    console.log(filteredNames);
+    displayCards(filteredNames);
+  });
 };
 
 generateCards();
