@@ -1,11 +1,10 @@
 const anagramChecker = (str1, str2) => {
-  console.log([...str1].sort().join("") === [...str2].sort().join(""));
+  let sorted1 = str1.split("").sort().join("").toLowerCase();
+  let sorted2 = str2.split("").sort().join("").toLowerCase();
+  return sorted1 == sorted2;
 };
 
-string1 = "lama";
-string2 = "mala";
+let string = "lama";
+let otherString = "mala";
 
-string3 = "tommy";
-string4 = "mommy";
-anagramChecker(string1, string2);
-anagramChecker(string3, string4);
+console.log(anagramChecker(string, otherString));
