@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #2176ee;
+}
+.mainContainer {
+  margin-top: 10rem;
+  text-align: center;
+}
+
+.parentContainer {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 300px;
+  margin: 50px auto;
+}
+
+.ticTacToeBox {
+  width: 100px;
+  height: 100px;
+  align-self: center;
+  justify-self: center;
+}
+
+.topLeft {
+  border-bottom: 5px solid black;
+}
+
+.topMiddle {
+  border-right: 5px solid black;
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+.topRight {
+  border-bottom: 5px solid black;
+}
+
+.middleLeft {
+  border-bottom: 5px solid black;
+}
+
+.middleMiddle {
+  border-bottom: 5px solid black;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+}
+
+.middleRight {
+  border-bottom: 5px solid black;
+}
+
+.lowerMiddle {
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+}

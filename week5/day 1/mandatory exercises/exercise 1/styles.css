@@ -1,0 +1,12 @@
+.formArea {
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+  margin: 1rem;
+}
+
+textarea {
+  margin: 1rem;
+}
