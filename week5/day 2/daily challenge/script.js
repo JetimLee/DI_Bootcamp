@@ -27,8 +27,6 @@ const clearAllGifs = () => {
 };
 clearButton.addEventListener("click", clearAllGifs);
 const createAGiph = (gifs) => {
-  // response = JSON.parse(response);
-  // let gifs = response.data;
   gifs.forEach((item) => {
     let imageContainer = document.createElement(`div`);
     imageContainer.classList.add("imageContainer");
@@ -45,10 +43,5 @@ const createAGiph = (gifs) => {
       imageContainer.removeChild(deleteButton);
     });
   });
-
-  // let imagesSources = gifs.map((el) => {
-  //
-  // });
-  // return imagesSources;
 };
 searchButton.addEventListener("click", loadUserInput);
