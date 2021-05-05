@@ -41,3 +41,19 @@ compareToTenn(11)
   .catch((error) => {
     console.log(error);
   });
+
+compareToTen(9)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+compareToTen("a")
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
