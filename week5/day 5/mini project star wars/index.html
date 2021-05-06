@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/6009118e5a.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
   </head>
   <body>
@@ -12,11 +16,13 @@
       <img src="images/star wars logo.png" alt="" />
     </header>
     <div class="parentContainer">
-      <div class="container">
-        <h3>name:<span id="name"></span></h3>
-        <p>height in centimeters<span id="height"></span></p>
-        <p>birth year<span id="birthYear"></span></p>
-        <p>home world:<span id="homeWorld"></span></p>
+      <div id="textContainer" class="container">
+        <i id="loader" class="fas fa-sync fa-spin fa-5x"></i>
+
+        <h3><span id="name"></span></h3>
+        <p><span id="height"></span></p>
+        <p><span id="birthYear"></span></p>
+        <p><span id="homeWorld"></span></p>
       </div>
     </div>
     <div class="buttonContainer"><button id="btn">find a person</button></div>

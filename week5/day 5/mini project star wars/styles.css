@@ -6,6 +6,12 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serifs;
 }
 
+.loading {
+  justify-self: center;
+  align-self: center;
+  font-size: 2rem;
+}
+
 button {
   background-color: black;
   width: 30%;
@@ -55,4 +61,9 @@ header {
 header img {
   width: 20%;
   height: 5%;
+}
+
+i {
+  align-self: center;
+  justify-self: center;
 }
