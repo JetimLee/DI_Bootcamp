@@ -22,7 +22,9 @@ const homeWorldName = async (obj) => {
   let response = await fetch(obj.homeworld)
     .then((response) => response.json())
     .catch((error) => {
-      console.log(error);
+      let anError = document.createElement("h1");
+      container.append(anError);
+      anError.innerText = `${error} an error occurred!`;
     });
   homeWorld.innerText = response.name;
 };
@@ -38,13 +40,17 @@ const updateInformation = async () => {
   let url = `https://swapi.dev/api/people/${randomNumber}/`;
   let response = await fetch(url)
     .then((res) => res.json())
-    .then((data) => (results = data));
+    .then((data) => (results = data))
+    .catch((error) => {
+      let anError = document.createElement("h1");
+      container.append(anError);
+      anError.innerText = "an error occurred!";
+    });
   generateRandomInformation(results);
   homeWorldName(results);
 };
 
 button.addEventListener("click", updateInformation);
-
 const getStarWars = async () => {
   let randomNumber = Math.floor(Math.random() * 10 + 1);
   let url = `https://swapi.dev/api/people/${randomNumber}/`;

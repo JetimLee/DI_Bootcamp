@@ -19,6 +19,7 @@ button {
   border: 3px solid #0c9af2;
   padding: 3rem;
   margin-bottom: 3rem;
+  cursor: pointer;
 }
 body {
   background-image: url(images/star\ wars\ background.jpg);
