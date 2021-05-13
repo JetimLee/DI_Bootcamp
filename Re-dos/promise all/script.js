@@ -6,10 +6,8 @@ const promise3 = new Promise((resolve, reject) => {
 
 let arrayOfPromises = [promise1, promise2, promise3];
 
-const doThePromiseThing = (array) => {
-  Promise.all([array])
-    .then((values) => {
-      console.log(values);
-    })
-    .catch((error) => console.log(error));
-};
+Promise.all(arrayOfPromises)
+  .then((values) => {
+    console.log(values);
+  })
+  .catch((error) => console.log(error));
