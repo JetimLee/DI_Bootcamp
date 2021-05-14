@@ -1,3 +1,6 @@
+//now to export to graph and have it display the information based on the local storage and my exported array.
+//I have to export the things I want to export into graph.js and import them from that file
+
 // select everything
 // select the todo-form
 const todoForm = document.querySelector(".todo-form");
@@ -9,9 +12,19 @@ const startDate = document.getElementById("start");
 const endDate = document.getElementById("end");
 const addButton = document.querySelector(".add-button");
 
+//variables to be exported, they contain the task number and days
+let taskNumber = 0;
+let arrayOfStartingDates = [];
+let arrayOfEndingDates = [];
+//
+
 let todos = [];
 
-startDate.addEventListener("change", function () {
+addButton.addEventListener("click", function () {
+  taskNumber++;
+});
+
+addButton.addEventListener("click", function () {
   let inputDate = startDate.valueAsDate;
   let day = inputDate.getDay();
   let weekdays = [
@@ -23,11 +36,23 @@ startDate.addEventListener("change", function () {
     "Friday",
     "Saturday",
   ];
-  localStorage.setItem("startDate", weekdays[day]);
-  console.log(localStorage);
+  const startingDate = {
+    task: `${taskNumber}`,
+    name: weekdays[day],
+  };
+  localStorage.setItem("startingDay", JSON.stringify(startingDate));
+  arrayOfStartingDates.push(startingDate);
+  console.log(arrayOfStartingDates);
+  // localStorage.setItem("startDateArray", []);
+  // let existing = localStorage.getItem("startDate");
+  // existing = existing ? existing.split(",") : [];
+  // existing.push(weekdays[day]);
+  // localStorage.setItem("startDate", existing.toString());
+  // console.log(existing);
+  // console.log(localStorage);
 });
 
-endDate.addEventListener("change", function () {
+addButton.addEventListener("click", function (e) {
   let inputDate = endDate.valueAsDate;
   let day = inputDate.getDay();
   let weekdays = [
@@ -39,8 +64,20 @@ endDate.addEventListener("change", function () {
     "Friday",
     "Saturday",
   ];
-  localStorage.setItem("endDate", weekdays[day]);
-  console.log(localStorage);
+  const endingDate = {
+    task: `${taskNumber}`,
+    name: weekdays[day],
+  };
+  localStorage.setItem("endingDay", JSON.stringify(endingDate));
+  arrayOfEndingDates.push(endingDate);
+  console.log(arrayOfEndingDates);
+  // localStorage.setItem("endDateArray", []);
+  // let existing = localStorage.getItem("endDate");
+  // existing = existing ? existing.split(",") : [];
+  // existing.push(weekdays[day]);
+  // localStorage.setItem("endDate", existing.toString());
+  // console.log(existing);
+  // console.log(localStorage);
 });
 
 // array which stores every todos
