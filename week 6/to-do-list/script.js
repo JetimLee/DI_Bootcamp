@@ -5,9 +5,45 @@ const todoForm = document.querySelector(".todo-form");
 const todoInput = document.querySelector(".todo-input");
 // select the <ul> with class="todo-items"
 const todoItemsList = document.querySelector(".todo-items");
+const startDate = document.getElementById("start");
+const endDate = document.getElementById("end");
+const addButton = document.querySelector(".add-button");
+
+let todos = [];
+
+startDate.addEventListener("change", function () {
+  let inputDate = startDate.valueAsDate;
+  let day = inputDate.getDay();
+  let weekdays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  localStorage.setItem("startDate", weekdays[day]);
+  console.log(localStorage);
+});
+
+endDate.addEventListener("change", function () {
+  let inputDate = endDate.valueAsDate;
+  let day = inputDate.getDay();
+  let weekdays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  localStorage.setItem("endDate", weekdays[day]);
+  console.log(localStorage);
+});
 
 // array which stores every todos
-let todos = [];
 
 // add an eventListener on form, and listen for submit event
 todoForm.addEventListener("submit", function (event) {
@@ -133,7 +169,7 @@ function deleteTodo(id) {
 }
 
 // initially get everything from localStorage
-getFromLocalStorage();
+// getFromLocalStorage();
 
 // after that addEventListener <ul> with class=todoItems. Because we need to listen for click event in all delete-button and checkbox
 todoItemsList.addEventListener("click", function (event) {
@@ -149,3 +185,5 @@ todoItemsList.addEventListener("click", function (event) {
     deleteTodo(event.target.parentElement.getAttribute("data-key"));
   }
 });
+
+//calendar stuff

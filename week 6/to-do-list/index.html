@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+
     <title>to-do-list</title>
   </head>
   <body>
@@ -14,7 +15,26 @@
       <form class="todo-form">
         <input type="text" class="todo-input" placeholder="Add a Todo..." />
         <button type="submit" class="add-button">Add</button>
+        <label for="start">Start date:</label>
+
+        <input
+          class="dateArea"
+          type="date"
+          id="start"
+          name="trip-start"
+          max="2021-12-31"
+        />
+        <label for="end">End date:</label>
+
+        <input
+          class="dateArea"
+          type="date"
+          id="end"
+          name="trip-start"
+          max="2021-12-31"
+        />
       </form>
+      <h3><a href="graph.html">Graph of Tasks</a></h3>
 
       <ul class="todo-items">
         <!-- dummy item
@@ -25,6 +45,7 @@
         </li> -->
       </ul>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
