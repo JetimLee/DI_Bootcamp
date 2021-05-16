@@ -1,11 +1,3 @@
-//import to here from script.js
-console.log(localStorage);
-
-let storedEndDay = localStorage.endDate;
-let storedStartingDay = localStorage.startDate;
-console.log(typeof storedStartingDay);
-console.log(storedEndDay, storedStartingDay);
-
 // window.addEventListener("load", createChart);
 // window.addEventListener("resize", createChart);
 

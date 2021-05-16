@@ -13,6 +13,7 @@ const endDate = document.getElementById("end");
 const addButton = document.querySelector(".add-button");
 
 //variables to be exported, they contain the task number and days
+let chocolate = "I love chocolate";
 let taskNumber = 0;
 let arrayOfStartingDates = [];
 let arrayOfEndingDates = [];
