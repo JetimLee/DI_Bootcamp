@@ -1,5 +1,5 @@
 import "./intro.scss";
 
 export default function Intro() {
-  return <div className="intro">yalla</div>;
+  return <div className="intro" id="intro"></div>;
 }
