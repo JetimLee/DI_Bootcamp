@@ -71,16 +71,43 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-
-let arr = ['a', 'b', 'c', 'd', 'e'];
+// let arr = ['a', 'b', 'c', 'd', 'e'];
 
 // console.log(arr.slice(0, 3));
 // console.log(arr.slice(1, -1));
 //does not mutate the array, returns a new array with the extracted parts
 //SPLICE does mutate the array
-console.log(arr);
-console.log(arr.splice(2));
-console.log(arr.splice(-1));
-console.log(arr); //here you can see the array has been mutated
-/////////////////////////////////////////////////
+// console.log(arr);
+// console.log(arr.splice(2));
+// console.log(arr.splice(-1));
+// console.log(arr); //here you can see the array has been mutated
+// /////////////////////////////////////////////////
+
+// arr = ['a', 'b', 'c', 'd', 'e'];
+// const arr2 = ['e', 'd', 'c', 'b', 'a'];
+// console.log(arr2.reverse()); //does mutate original array
+
+// //concat - joins two arrays
+
+// const letters = arr.concat(arr2); //concat does not mutate original array
+// //same as
+// console.log([...arr, ...arr2]);
+// console.log(letters);
+
+// //join
+
+// console.log(letters.join(' - '));
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const printMessages = arr => {
+  arr.forEach(element => {
+    if (element > 0) {
+      console.log(`user deposited ${element}`);
+    } else {
+      console.log(`user withdrew ${Math.abs(element)}`); //math.abs removes the sign
+    }
+  });
+};
+
+printMessages(movements);
