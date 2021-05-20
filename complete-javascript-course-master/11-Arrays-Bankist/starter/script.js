@@ -61,15 +61,27 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+const displayMovements = movements => {
+  containerMovements.innerHTML = '';
+  movements.forEach((movement, index) => {
+    const type = movement > 0 ? `deposit` : `withdrawal`;
+
+    const html = `<div class="movements__row">
+    <div class="movements__type movements__type--${type}">${
+      index + 1
+    } ${type}</div>
+    <div class="movements__value">${movement}</div>
+  </div>`;
+
+    containerMovements.insertAdjacentHTML(`afterbegin`, html);
+  });
+};
+
+displayMovements(account1.movements);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
-
-const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
-]);
 
 // let arr = ['a', 'b', 'c', 'd', 'e'];
 
@@ -98,16 +110,68 @@ const currencies = new Map([
 
 // console.log(letters.join(' - '));
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-const printMessages = arr => {
-  arr.forEach(element => {
-    if (element > 0) {
-      console.log(`user deposited ${element}`);
-    } else {
-      console.log(`user withdrew ${Math.abs(element)}`); //math.abs removes the sign
-    }
+// const printMessages = arr => {
+//   arr.forEach((element, index, array) => {
+//     if (element > 0) {
+//       console.log(`action ${index + 1} user deposited ${element}`);
+//     } else {
+//       console.log(`action ${index + 1} user withdrew ${Math.abs(element)}`); //math.abs removes the sign
+//     }
+//   });
+// };
+
+// printMessages(movements);
+
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
+
+// currencies.forEach((value, key, map) => {
+//   console.log(`${value}: ${key}`);
+// });
+
+//with a set
+
+const currenciesUnique = new Set([
+  'USD',
+  'GDP',
+  'NIS',
+  'USD',
+  'NIS',
+  'EUR',
+  'EUR',
+]);
+
+//returns only unique values
+
+// console.log(currenciesUnique);
+
+// currenciesUnique.forEach((value, _, map) => {
+//   console.log(`${value}: ${value}`); //set doesn't have keys or indexes, so this prints the same thing
+//   //underscore is a throw away variable
+// });
+
+//challenge
+function checkDogs(arr1, arr2) {
+  let newArr1 = arr1.slice(1, -2); //shallow clone, best practice is not to mutate a parameter
+  console.log(newArr1);
+  let joinedArray = newArr1.concat(arr2);
+  console.log(joinedArray);
+  joinedArray.forEach(el => {
+    el > 3 ? console.log(`${el} adult`) : console.log(`${el} not an adult`);
   });
-};
+}
 
-printMessages(movements);
+let firstArray = [3, 5, 2, 12, 7];
+let secondArray = [4, 1, 15, 8, 3];
+
+// checkDogs(firstArray, secondArray);
+
+let newestFirstArray = [9, 16, 6, 8, 3];
+let newestSecondArray = [10, 5, 6, 1, 4];
+
+checkDogs(newestFirstArray, newestSecondArray);
