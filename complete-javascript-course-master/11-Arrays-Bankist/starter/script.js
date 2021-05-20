@@ -73,4 +73,14 @@ const currencies = new Map([
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
+let arr = ['a', 'b', 'c', 'd', 'e'];
+
+// console.log(arr.slice(0, 3));
+// console.log(arr.slice(1, -1));
+//does not mutate the array, returns a new array with the extracted parts
+//SPLICE does mutate the array
+console.log(arr);
+console.log(arr.splice(2));
+console.log(arr.splice(-1));
+console.log(arr); //here you can see the array has been mutated
 /////////////////////////////////////////////////
