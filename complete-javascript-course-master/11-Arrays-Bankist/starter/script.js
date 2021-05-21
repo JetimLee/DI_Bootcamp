@@ -113,6 +113,21 @@ const getBalance = arr => {
 };
 
 getBalance(movements);
+
+const calcDisplaySummary = movements => {
+  const incomes = movements
+    .filter(el => el > 0)
+    .reduce((accumulator, current) => accumulator + current, 0);
+  labelSumIn.textContent = `${incomes} EUR`;
+
+  const out = movements
+    .filter(el => el < 0)
+    .reduce((accumulator, current) => accumulator + current, 0);
+  console.log(`out ${Math.abs(out)}`);
+  labelSumOut.textContent = `${Math.abs(out)} eur`;
+};
+
+calcDisplaySummary(movements);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -256,3 +271,78 @@ let convertedFromEurToUSD = movements.map(element => {
 // }, 0); //accumulator is initalized at 0 because that's where we want to start counting
 
 // console.log(`balance ${balance}`);
+
+//getting the maximum value
+//reduce is for boiling down to a single value, but it doesn't have to be a sum
+
+// const getMax = arr => {
+//   let maximum = arr.reduce((accumulator, current) => {
+//     if (accumulator > current) {
+//       return accumulator;
+//     } else {
+//       return current;
+//     }
+//   }, arr[0]); //start here because this would not work in finding the minimim
+//   return maximum;
+// };
+
+// console.log(getMax(movements));
+
+// const getMinimum = arr => {
+//   let minimum = arr.reduce((accumulator, current) => {
+//     if (accumulator < current) {
+//       return accumulator;
+//     } else {
+//       return current;
+//     }
+//   }, arr[0]);
+//   return minimum;
+// };
+
+// console.log(getMinimum(account2.movements));
+
+// //coding challenge 2
+
+// const calcAverageHumanAge = arr => {
+//   const humanAgeArray = arr.map(el => {
+//     if (el <= 2) {
+//       return el * 2;
+//     } else {
+//       return 16 + el * 4;
+//     }
+//   });
+// let humanAgeArray = [];
+// arr.forEach(el => {
+//   if (el <= 2) {
+//     humanAgeArray.push(el * 2);
+//   } else {
+//   //     humanAgeArray.push(16 + el * 4);
+//   //   }
+//   // });
+//   console.log(`human age array ${humanAgeArray}`);
+//   const under18 = humanAgeArray.filter((el, i) => {
+//     return el > 18;
+//   });
+//   console.log(`over age 18 array ${under18}`);
+//   const totalAges = under18.reduce((accumulator, current) => {
+//     return accumulator + current;
+//   }, 0);
+//   console.log(`total ages ${totalAges}`);
+//   const ageAverages = totalAges / under18.length;
+//   console.log(`age average is ${ageAverages}`);
+// };
+
+// let data1 = [5, 2, 4, 1, 15, 8, 3];
+// let data2 = [16, 6, 10, 5, 6, 1, 4];
+
+// calcAverageHumanAge(data1);
+// calcAverageHumanAge(data2);
+
+const totalDepositsInUSD = movements
+  .filter(move => move > 0)
+  .map(mov => mov * eurToUsd)
+  .reduce((accumulator, current) => accumulator + current, 0);
+
+console.log(`total ${totalDepositsInUSD}`);
+
+//can chain many different methods, so long as they return new arrays, after reduce tho you cannot chain a method as it returns a value and not an array
