@@ -79,6 +79,40 @@ const displayMovements = movements => {
 
 displayMovements(account1.movements);
 
+// const user = 'Steven Thomas Williams';
+// const username = user.toLocaleLowerCase().split(' ');
+// console.log(username);
+
+// let initials = username.map(el => {
+//   return el[0].toUpperCase();
+// });
+// console.log(initials);
+
+const createUsernames = arr => {
+  arr.forEach(el => {
+    el.username = el.owner //adding a property to each object, setting it equal to .owner property of the object
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('')
+      .toUpperCase();
+  });
+};
+createUsernames(accounts);
+console.log(accounts);
+
+const movements = account1.movements;
+
+const getBalance = arr => {
+  const balance = arr.reduce((accumulator, current) => {
+    return accumulator + current;
+  }, 0);
+  labelBalance.textContent = `${balance} EUR`;
+
+  return balance;
+};
+
+getBalance(movements);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -155,23 +189,70 @@ const currenciesUnique = new Set([
 //   //underscore is a throw away variable
 // });
 
-//challenge
-function checkDogs(arr1, arr2) {
-  let newArr1 = arr1.slice(1, -2); //shallow clone, best practice is not to mutate a parameter
-  console.log(newArr1);
-  let joinedArray = newArr1.concat(arr2);
-  console.log(joinedArray);
-  joinedArray.forEach(el => {
-    el > 3 ? console.log(`${el} adult`) : console.log(`${el} not an adult`);
-  });
-}
+// //challenge
+// function checkDogs(arr1, arr2) {
+//   let newArr1 = arr1.slice(1, -2); //shallow clone, best practice is not to mutate a parameter
+//   console.log(newArr1);
+//   let joinedArray = newArr1.concat(arr2);
+//   console.log(joinedArray);
+//   joinedArray.forEach(el => {
+//     el >= 3 ? console.log(`${el} adult`) : console.log(`${el} not an adult`);
+//   });
+// }
 
-let firstArray = [3, 5, 2, 12, 7];
-let secondArray = [4, 1, 15, 8, 3];
+// let firstArray = [3, 5, 2, 12, 7];
+// let secondArray = [4, 1, 15, 8, 3];
 
-// checkDogs(firstArray, secondArray);
+// // checkDogs(firstArray, secondArray);
 
-let newestFirstArray = [9, 16, 6, 8, 3];
-let newestSecondArray = [10, 5, 6, 1, 4];
+// let newestFirstArray = [9, 16, 6, 8, 3];
+// let newestSecondArray = [10, 5, 6, 1, 4];
 
-checkDogs(newestFirstArray, newestSecondArray);
+// checkDogs(newestFirstArray, newestSecondArray);
+
+const eurToUsd = 1.1;
+
+let convertedFromEurToUSD = movements.map(element => {
+  return element * eurToUsd;
+});
+//more in line with functional programming
+
+// console.log(convertedFromEurToUSD);
+
+//sort of the same thing, just longer.
+//map uses a function to create a new function, the for of method solves the problem using a declared array
+// const movementsUSDFor = [];
+// for (const mov of movements) {
+//   movementsUSDFor.push(mov);
+// }
+// console.log(movementsUSDFor);
+
+// const movementDescriptions = movements.map((mov, i) => {
+//   if (mov > 0) {
+//     return `action ${i + 1} user deposited ${mov}`;
+//   } else {
+//     return `action ${i + 1} user withdrew ${Math.abs(mov)}`;
+//   }
+// });
+
+// console.log(movementDescriptions);
+
+// const deposits = movements.filter((el, i, arr) => {
+//   return el > 0;
+// });
+// const withdrawals = movements.filter(el => {
+//   return el < 0;
+// });
+
+// console.log(`here are deposits ${deposits}`);
+// console.log(`here are withdrawals ${withdrawals}`);
+
+//reduce method, adds up all elements in an array
+//accumulator is like a snowball
+
+// const balance = movements.reduce((accumulator, current, i, arr) => {
+//   console.log(`Iteration #${i}: ${accumulator}`);
+//   return accumulator + current;
+// }, 0); //accumulator is initalized at 0 because that's where we want to start counting
+
+// console.log(`balance ${balance}`);
