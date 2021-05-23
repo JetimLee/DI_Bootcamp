@@ -1,13 +1,14 @@
 const axios = require("axios");
 const sideFile = require(`./script2`);
 
-const getNames = (arr) => {
-  for (i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-  }
-};
-
-console.log(sideFile.getData());
+// const getNames = (arr) => {
+//   for (i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+//   }
+// };
+console.log(
+  sideFile.getData().then((data) => data.forEach((el) => console.log(el.id)))
+);
 
 // axios
 //   .get("https://jsonplaceholder.typicode.com/users")

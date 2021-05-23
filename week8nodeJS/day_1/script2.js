@@ -16,14 +16,13 @@ async function getTheData() {
     let response = await axios.get(
       "https://jsonplaceholder.typicode.com/users"
     );
-    console.log(response);
-    return response;
+    return response.data;
   } catch (error) {
     console.log(`${error} an error occurred`);
   }
 }
 
-getTheData().then((data) => data);
+// getTheData().then((data) => data);
 
 module.exports = {
   id: num,
