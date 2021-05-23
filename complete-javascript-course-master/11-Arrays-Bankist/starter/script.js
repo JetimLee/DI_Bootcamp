@@ -125,6 +125,16 @@ const calcDisplaySummary = movements => {
     .reduce((accumulator, current) => accumulator + current, 0);
   console.log(`out ${Math.abs(out)}`);
   labelSumOut.textContent = `${Math.abs(out)} eur`;
+
+  const interest = movements
+    .filter(el => el > 0)
+    .map(el => el * 0.012)
+    .filter((el, i, arr) => {
+      console.log(arr);
+      return el > 1;
+    })
+    .reduce((accumulator, current) => accumulator + current, 0);
+  labelSumInterest.textContent = interest;
 };
 
 calcDisplaySummary(movements);
