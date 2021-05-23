@@ -1,5 +1,6 @@
 let a = 5;
 let b = 10;
+console.log(`hello, you are ${a + b}`);
 console.log(`first run ${a + b}`);
 console.log("thanks for running me with npm start!");
 
