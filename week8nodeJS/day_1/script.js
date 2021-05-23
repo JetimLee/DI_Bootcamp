@@ -7,7 +7,7 @@ const sideFile = require(`./script2`);
 //   }
 // };
 console.log(
-  sideFile.getData().then((data) => data.forEach((el) => console.log(el.id)))
+  sideFile.getData().then((data) => data.forEach((el) => console.log(el.name)))
 );
 
 // axios
