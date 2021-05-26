@@ -1,24 +1,28 @@
 const myButton = document.getElementById("myButton");
-const user = document.getElementById("user");
+const item = document.getElementById("item");
+const price = document.getElementById("price");
 const secondButton = document.getElementById("secondButton");
 const root = document.getElementById("root");
 
-const getData = async () => {
-  fetch("http://localhost:5000/showUsers")
+const getData = () => {
+  console.log("fired");
+  fetch("http://localhost:5000/showItems")
     .then((res) => res.json())
     .then((data) => createData(data))
     .catch((error) => console.log(error));
 };
 
 const sendData = () => {
-  let value = user.value;
-  console.log(value);
+  let itemName = item.value;
+  let itemPrice = price.value;
+
+  console.log(itemName, itemPrice);
   fetch("http://localhost:5000/add", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ value }),
+    body: JSON.stringify({ itemName, itemPrice }),
   })
     .then((res) => res.json())
     .then((data) => console.log(data))
@@ -36,9 +40,18 @@ myButton.addEventListener("click", () => {
 });
 
 const createData = (arr) => {
-  arr.forEach((item) => {
-    let div = document.createElement("div");
-    div.innerText = item.value;
-    root.append(div);
-  });
+  console.log(arr);
+  try {
+    arr.forEach((item) => {
+      let div = document.createElement("div");
+      let name = document.createElement("p");
+      let price = document.createElement("p");
+      name.textContent = `${item.itemName}: $${item.itemPrice}`;
+      price.textContent = item.itemPrice;
+      div.append(name);
+      root.append(div);
+    });
+  } catch (e) {
+    console.log(e);
+  }
 };

@@ -17,18 +17,18 @@ server.use("/", express.static(__dirname + "/public"));
 // });
 
 server.post("/add", (req, res) => {
-  console.log(req.body);
-  let userArray = [];
+  // console.log(req.body);
+  let itemArray = [];
 
-  const userJSON = fs.readFileSync("./users");
-  console.log(userJSON);
-  let userJsonString = userJSON.toString();
-  console.log(userJsonString);
-  userArray = JSON.parse(userJsonString);
-  console.log(userArray);
-  userArray.push(req.body);
+  const shoppingJSON = fs.readFileSync("./shoppingLIst");
+  console.log(shoppingJSON);
+  let shoppingJsonString = shoppingJSON.toString();
+  console.log(shoppingJSON);
+  shoppingArray = JSON.parse(shoppingJsonString);
+  console.log(itemArray);
+  itemArray.push(req.body);
 
-  fs.writeFile("./users", JSON.stringify(userArray), (error) => {
+  fs.writeFile("./shoppingList", JSON.stringify(itemArray), (error) => {
     if (error) {
       console.log(error);
     }
@@ -37,15 +37,12 @@ server.post("/add", (req, res) => {
   res.send({ message: "ok" });
 });
 
-server.get("/showUsers", (req, res) => {
-  let userArray = [];
+server.get("/showItems", (req, res) => {
+  console.log("trying to show items");
+  const shoppingJSON = fs.readFileSync("./shoppingList");
+  let shoppingList = shoppingJSON.toString();
 
-  const userJSON = fs.readFileSync("./users");
-  console.log(userJSON);
-  let userJsonString = userJSON.toString();
-  console.log(userJsonString);
-  userArray = JSON.parse(userJsonString);
-  res.send(userArray);
+  res.send(shoppingList);
 });
 
 server.listen(5000, () => {
