@@ -1,11 +1,7 @@
 import React from "react";
 
 const NoJSX = () => {
-  return (
-    <div>
-      <h1>I don't like JSX!</h1>
-    </div>
-  );
+  return React.createElement("div", null, `Hello, I do not use JSX`);
 };
 
 export default NoJSX;
