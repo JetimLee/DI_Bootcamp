@@ -3,11 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Alert from "react-bootstrap/Alert";
 
 const ConditionalAlert = (props) => {
-  if (props.show === false) {
-    return null;
-  } else {
-    return <Alert variant={"danger"}>{props.text}</Alert>;
-  }
+  const colorClasses = {
+    red: "danger",
+    orange: "warning",
+  };
+
+  return <Alert variant={colorClasses[props.thing]}>{props.thing}</Alert>;
 };
 
 export default ConditionalAlert;

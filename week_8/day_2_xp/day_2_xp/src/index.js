@@ -23,8 +23,8 @@ ReactDOM.render(
     <CreateJumbotron name="React" />
     <Alert text="Uh oh, something bad happened" />
     <ConditionalAlert show={false} text="Another bad thing happened" />
-    <SmartAlert color="red" text="a danger warning" />
-    <SmartAlert text="a warning warning" />
+    <SmartAlert thing="red" />
+    <SmartAlert thing="orange" />
     <MoreAlertColors thing="red" />
     <MoreAlertColors thing="orange" />
     <MoreAlertColors thing="green" />
