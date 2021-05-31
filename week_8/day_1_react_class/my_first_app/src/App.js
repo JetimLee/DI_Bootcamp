@@ -1,17 +1,25 @@
-import "./App.css";
-import Card from "./Card";
+import React from "react";
 
-function App() {
-  return (
-    <div className="myFlex">
+import "./App.css";
+import Card from "./components/Card";
+import CardsList from "./components/Cardslist";
+
+class App extends React.Component() {
+  constructor(){
+    super()
+    this.state={
+      robots: []
+    }
+  }
+  render() {
+    const {robots} = {this.state}
+
+    return (
       <div>
-        <Card name={"Gavin"} email={"gavin@gmail.com"} id={"1"} />
+        <CardsList robots={robots} />
       </div>
-      <div>
-        <Card name={"Jetim"} email={"jetim@gmail.com"} id={"2"} />
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
