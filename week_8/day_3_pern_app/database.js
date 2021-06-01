@@ -7,17 +7,21 @@ const client = new Client({
   password: "jetimlee69!",
   database: "dvdrental",
 });
-client.connect();
-client.query("select * from country", (err, result) => {
-  if (!err) {
-    console.log(result.rows);
-  } else console.log(err);
-  client.end();
-});
-client.on("connect", () => {
-  console.log("database connected");
-});
-client.on("end", () => {
-  console.log("database connection ended");
-});
-module.exports = client;
+
+const getCountries = () => {
+  client.connect();
+  client.query("select * from country", (err, result) => {
+    if (!err) {
+      console.log(result.rows);
+      return result.rows;
+    }
+    client.end();
+  });
+  client.on("connect", () => {
+    console.log("database connected");
+  });
+  client.on("end", () => {
+    console.log("database connection ended");
+  });
+};
+module.exports = getCountries;
