@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import faker from "faker";
 import CommentDetail from "./CommentDetail";
+import "semantic-ui-css/semantic.min.css";
+import ApprovalCard from "./ApprovalCard";
 
 if (module.hot) {
   module.hot.accept();
@@ -10,6 +12,7 @@ if (module.hot) {
 const App = () => {
   return (
     <div className="ui container comments">
+      <ApprovalCard />
       <CommentDetail
         author="Sam"
         timeAgo="Today at 4:45pm"
