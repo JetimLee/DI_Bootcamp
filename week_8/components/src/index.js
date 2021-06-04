@@ -12,25 +12,30 @@ if (module.hot) {
 const App = () => {
   return (
     <div className="ui container comments">
-      <ApprovalCard />
-      <CommentDetail
-        author="Sam"
-        timeAgo="Today at 4:45pm"
-        comment="props"
-        imageURL={faker.image.image()}
-      />
-      <CommentDetail
-        author="Alex"
-        timeAgo="Today at 5:00pm"
-        comment="yay"
-        imageURL={faker.image.image()}
-      />
-      <CommentDetail
-        imageURL={faker.image.image()}
-        author="Jane"
-        timeAgo="Yesterday at 4:40pm"
-        comment="awesome"
-      />
+      <ApprovalCard>
+        <CommentDetail
+          author="Sam"
+          timeAgo="Today at 4:45pm"
+          comment="props"
+          imageURL={faker.image.image()}
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail
+          author="Alex"
+          timeAgo="Today at 5:00pm"
+          comment="yay"
+          imageURL={faker.image.image()}
+        />
+      </ApprovalCard>
+      <ApprovalCard>
+        <CommentDetail
+          imageURL={faker.image.image()}
+          author="Jane"
+          timeAgo="Yesterday at 4:40pm"
+          comment="awesome"
+        />
+      </ApprovalCard>
     </div>
   );
 };
