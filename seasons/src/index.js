@@ -4,16 +4,29 @@ import ReactDOM from "react-dom";
 class App extends React.Component {
   constructor(props) {
     super(props);
+    //this is the only time we do a direct assignment to this.state, any other time you MUST use this.setState
     this.state = {
       lat: null,
+      errorMessage: "",
     };
+    window.navigator.geolocation.getCurrentPosition(
+      (position) => {
+        //must call setState and pass in the state stuff you want to update by putting the object inside of the brackets
+        this.setState({ lat: position.coords.latitude });
+      },
+      (error) => {
+        this.setState({ errorMessage: error.message });
+      }
+    );
   }
   render() {
-    window.navigator.geolocation.getCurrentPosition(
-      (position) => console.log(position),
-      (error) => console.log(error)
-    );
-    return <div>{this.state.lat}</div>;
+    if (this.state.errorMessage && !this.state.lat) {
+      return <div>{this.state.errorMessage.toString()}</div>;
+    }
+    if (!this.state.errorMessage && this.state.lat) {
+      return <div>{this.state.lat}</div>;
+    }
+    return <div>loading</div>;
   }
 }
 
