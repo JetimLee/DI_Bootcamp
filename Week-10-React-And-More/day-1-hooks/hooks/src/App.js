@@ -1,10 +1,10 @@
 import "./App.css";
-import CardList from "./components/CardList";
+import Counter from "./CounterWithHooks/Counter";
 
 function App() {
   return (
     <div className="App">
-      <CardList />
+      <Counter />
     </div>
   );
 }
