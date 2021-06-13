@@ -1,0 +1,20 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  border: 3px solid black;
+  height: 100%;
+  align-items: center;
+  justify-items: center;
+}
+.number {
+  border: 3px solid black;
+  height: 3rem;
+  width: 3rem;
+}
+
+.masterContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+  height: 400px;
+}
