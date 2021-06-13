@@ -9,6 +9,8 @@ import {
 } from "../features/userSlice";
 import { Avatar } from "@material-ui/core";
 import { GoogleLogout } from "react-google-login";
+
+import "../styling/navbar.css";
 //can write && if you don't want a secondary condition, ie, using a ternary operator
 
 const Navbar = () => {
@@ -20,7 +22,10 @@ const Navbar = () => {
     dispatch(setSignedIn(false));
     dispatch(setUserData(null));
   };
-  const handleClick = (e) => {};
+  const handleClick = (e) => {
+    e.preventDefault();
+    dispatch(setInput(inputValue));
+  };
   return (
     <div className="navbar">
       <h1 className="navbar__header">Blogfun</h1>
@@ -39,7 +44,11 @@ const Navbar = () => {
       )}
       {isSignedIn ? (
         <div className="navbar__user__data">
-          <Avatar src={userData?.imageUrl} alt={userData?.name} />
+          <Avatar
+            className="user"
+            src={userData?.imageUrl}
+            alt={userData?.name}
+          />
           <h1 className="signedIn">{userData?.givenName}</h1>
           <GoogleLogout
             clientId="592661744956-b2udjfopeqtncqd6s09up3625hsb2ad3.apps.googleusercontent.com"
@@ -56,7 +65,7 @@ const Navbar = () => {
           />
         </div>
       ) : (
-        ""
+        <h1 className="notSignedIn">User not available</h1>
       )}
     </div>
   );
