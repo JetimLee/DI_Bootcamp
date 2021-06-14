@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexContainer {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  height: 400px;
+}
+
+h1,
+h3 {
+  text-align: center;
+  margin-top: 1rem;
+}
+input {
+  margin: 1rem;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.inputContainer > * {
+  padding: 1rem;
+  margin: 1rem;
+  border-bottom: 3px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.forecastArea {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
