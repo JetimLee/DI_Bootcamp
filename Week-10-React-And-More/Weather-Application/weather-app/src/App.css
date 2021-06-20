@@ -38,3 +38,17 @@ input {
   justify-content: center;
   margin-top: 1rem;
 }
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  margin-top: 1rem;
+}

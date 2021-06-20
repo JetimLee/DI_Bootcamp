@@ -1,12 +1,8 @@
 import "./App.css";
-import Calculator from "./components/Calculator";
+import ShyCode from "./components/ShyCode";
 
 function App() {
-  return (
-    <div className="App">
-      <Calculator />
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
