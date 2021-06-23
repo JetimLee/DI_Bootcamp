@@ -1,0 +1,16 @@
+.questions {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  overflow-wrap: break-word;
+  width: 800px;
+  justify-content: space-between;
+}
+p {
+  margin-left: 1rem;
+}
+
+h1 {
+  margin-left: 1rem;
+}
