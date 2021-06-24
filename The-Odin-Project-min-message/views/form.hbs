@@ -1,8 +1,13 @@
-<form method="POST" action="/new">
-  <h2>{{title}}</h2>
-  <label>Name:</label>
-  <input name="user" type="text" />
-  <label>Message:</label>
-  <input name="text" type="text" />
-  <button type="submit">Make comment</button>
-</form>
+<div class="formContainer">
+  <form method="POST" action="/new">
+    <h2>{{title}}</h2>
+    <label>Name:</label>
+    <input id="userField" name="user" type="text" />
+    <label>Message:</label>
+    <input id="messageField" name="text" type="text" />
+    <div>
+      <button type="submit">Make comment</button>
+
+    </div>
+  </form>
+</div>
