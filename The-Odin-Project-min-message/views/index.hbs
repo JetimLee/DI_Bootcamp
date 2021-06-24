@@ -1,0 +1,18 @@
+<section>
+  <div class="parent">
+    <h1>{{title}}</h1>
+    <p>Welcome to {{title}}</p>
+    <div class="messageBoard">
+      <ul class="usersAndMessages">
+        {{#each messages}}
+          <li class="username">{{this.user}}</li>
+          <li class="message">Message: {{this.text}}</li>
+          <li class="timeSent">Sent:{{this.added}}</li>
+          <hr />
+        {{/each}}
+      </ul>
+    </div>
+    <h3><a href="/new">Create a new comment</a></h3>
+  </div>
+
+</section>
