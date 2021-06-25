@@ -22,6 +22,7 @@ const createProduct = async (req, resp, next) => {
       price: req.body.price,
     });
     const result = await createdProduct.save();
+    console.log(typeof createdProduct.id);
 
     resp.json(result);
   } catch (error) {
@@ -29,4 +30,10 @@ const createProduct = async (req, resp, next) => {
   }
 };
 
+const getProducts = async (req, resp, next) => {
+  const products = await Product.find().exec();
+  resp.json(products);
+};
+
 exports.createProduct = createProduct;
+exports.getProducts = getProducts;

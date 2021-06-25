@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.post("/products", mongoPractice.createProduct);
-// app.get("/products", getProducts);
+app.get("/products", getProducts);
 
 app.listen(3000, () => {
   console.log(`app running on port 3000`);
