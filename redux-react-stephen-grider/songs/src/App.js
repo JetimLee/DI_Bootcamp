@@ -1,5 +1,4 @@
 import "./App.css";
-import { selectSong } from "./actions/index";
 import SongList from "./components/SongList";
 
 //you define the connect in the component that requires it
