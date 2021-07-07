@@ -30,12 +30,11 @@ const SongList = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
-  //   console.log(state);
+  // console.log(`state from map state to props ${JSON.stringify(state)}`);
+  // console.log(state.selectedSong);
   //this object will show up as props inside of the component
   return { songs: state.songs };
 };
-
 //passing in the action creator this way passes the action creator into the component as a prop
 export default connect(mapStateToProps, {
   selectSong,
