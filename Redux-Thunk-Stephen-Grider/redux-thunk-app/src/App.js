@@ -1,7 +1,12 @@
 import "./App.css";
+import PostList from "./components/PostList";
 
 function App() {
-  return <div></div>;
+  return (
+    <div className="ui container">
+      <PostList />
+    </div>
+  );
 }
 
 export default App;
