@@ -5,7 +5,6 @@ const request = require("request-promise");
 const app = express();
 const PORT = 4000 || process.env.PORT;
 
-// const API_KEY = "dcdada876e8462417a65ab5b24caeddc";
 //this parses json input, replacing body parser
 app.use(express.json());
 
