@@ -67,7 +67,13 @@ a {
   align-items: center;
   padding: 1rem;
 }
-
+h1 {
+  color: grey;
+}
+h3 {
+  color: #393a3d;
+  font-weight: 400;
+}
 form {
   display: flex;
   flex-direction: column;
