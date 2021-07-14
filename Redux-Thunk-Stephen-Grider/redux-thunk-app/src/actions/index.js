@@ -11,7 +11,7 @@ export const fetchPosts = () => {
     //   payload: promise,
     // };
 
-    dispatch({ type: "FETCH_POSTS", payload: response });
+    dispatch({ type: "FETCH_POSTS", payload: response.data });
   };
   //bad approach, this breaks the rules of redux - of an action creator
   //the bad approach is to try and use an async/await inside of your action creator - it won't work, at least not without thunk, as done above

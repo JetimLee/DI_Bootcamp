@@ -5,8 +5,11 @@ const PostList = (props) => {
   useEffect(() => {
     props.fetchPosts();
   }, []);
+  console.log(props.posts);
   return <div>PostList</div>;
 };
 
-const mapStateToProps = () => {};
-export default connect(null, { fetchPosts })(PostList);
+const mapStateToProps = (state) => {
+  return { posts: state.posts };
+};
+export default connect(mapStateToProps, { fetchPosts })(PostList);
