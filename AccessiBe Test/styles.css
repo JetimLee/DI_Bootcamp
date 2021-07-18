@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/*top nav bar configurations begin here */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 10px;
+  background-color: #e4edf2;
+}
+ul {
+  display: flex;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+li {
+  margin: 15px;
+}
+
+.quoteContainer {
+  margin-right: 100px;
+}
+.nav-link {
+  color: black;
+}
+.logoAndCompanyInfo {
+  display: flex;
+  justify-content: space-evenly;
+  width: 500px;
+  align-items: center;
+}
+.button-primary {
+  background-color: #0455bf;
+  color: white;
+  padding: 8px 20px;
+  white-space: nowrap;
+}
+/* begin content area */
+.top-content {
+  background-color: #e4edf2;
+}
+.image-text-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header {
+  font-size: 32px;
+}
+.money-chart {
+  width: 300px;
+}
+.paragraph-container {
+  margin-bottom: 100px;
+}
+.text-container {
+  width: 400px;
+  white-space: nowrap;
+}
+.content-paragraph {
+  line-height: 1.7;
+  font-size: 13px;
+}
+.image-content-container {
+  align-self: center;
+  margin-bottom: 125px;
+}
+.main-carousel-container {
+  display: flex;
+  justify-content: center;
+}
+.carousel-container {
+  padding-top: 25px;
+  height: 200px;
+  width: 800px;
+  margin-top: -100px;
+  display: absolute;
+  -webkit-box-shadow: 0px 0px 10px 1px #eeeff1;
+  box-shadow: 0px 0px 10px 1px #eeeff1;
+  background-color: white;
+}
+.card-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.profile-picture-container {
+  padding-top: 10px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.profile-picture {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 50px;
+}
+.name {
+  font-size: 12px;
+}
+.name-container {
+  margin-bottom: -10px;
+}
+.review-stars {
+  margin-top: -10px;
+}
+
+.review-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* company intro area */
+.company-intro {
+  display: flex;
+  justify-content: center;
+}
