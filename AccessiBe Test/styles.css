@@ -125,7 +125,19 @@ li {
 }
 
 /* company intro area */
-.company-intro {
+
+.services-info-section {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
+}
+.company-intro {
+  width: fit-content;
+}
+.adjusted-header {
+  text-align: center;
+  line-height: 1.7;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 5px;
 }
