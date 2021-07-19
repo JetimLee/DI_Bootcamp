@@ -5,11 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EcoMetrics</title>
+
+    <!--my css-->
     <link rel="stylesheet" href="styles.css" />
+    <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+
+    <!--font awesome cdn-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+
+    <!--owl carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    />
   </head>
+
+  <!--begin html page-->
+
   <body>
     <header class="topNavBar">
       <div class="logoAndCompanyInfo">
@@ -53,16 +76,21 @@
         </div>
       </div>
     </section>
-    <div class="main-carousel-container">
-      <div class="carousel-container">
-        <div class="carousel">
-          <div class="card-header">
-            <p>Trusted by over <strong>200,000</strong> users and counting</p>
-          </div>
-          <div class="review-card">
-            <div class="profile-picture-container">
-              <div class="name-container"><p class="name">Sapir Madar</p></div>
 
+    <!--end content-->
+
+    <!--Begin carousel-->
+    <div class="centering-container">
+      <div class="main-carousel-container">
+        <!--the main carousel container is doing display flex and centers the carousel-->
+        <div id="carousel" class="carousel owl-carousel">
+          <!-- <p class="centered-paragraph">Trusted by over <strong>200,000</strong> users and counting</p> -->
+          <div class="review-card">
+            <!-- this is a flex container with align/justify items center-->
+            <div class="profile-picture-container">
+              <div class="name-container">
+                <p class="name">Sapir Madar</p>
+              </div>
               <img
                 src="images/savpir-bride-pic.jpg"
                 alt="a profile picture with a circle background"
@@ -99,8 +127,88 @@
               />
             </div>
           </div>
-          <div class="review-card"></div>
-          <div class="review-card"></div>
+          <div class="review-card">
+            <div class="profile-picture-container">
+              <div class="name-container">
+                <p class="name">Sapir Madar</p>
+              </div>
+              <img
+                src="images/savpir-bride-pic.jpg"
+                alt="a profile picture with a circle background"
+                class="profile-picture"
+              />
+              <div class="review-stars">*****</div>
+            </div>
+            <div class="profile-picture-container">
+              <img
+                src="images/my-business-pic.jpg"
+                alt="a profile picture with a circle background"
+                class="profile-picture"
+              />
+            </div>
+            <div class="profile-picture-container">
+              <img
+                src="images/emily-wedding-pic.jpg"
+                alt="a profile picture with a circle background"
+                class="profile-picture"
+              />
+            </div>
+            <div class="profile-picture-container">
+              <img
+                src="images/my-business-pic.jpg"
+                alt="a profile picture with a circle background"
+                class="profile-picture"
+              />
+            </div>
+            <div class="profile-picture-container">
+              <img
+                src="images/tom-wedding-pic.jpg"
+                alt="a profile picture with a circle background"
+                class="profile-picture"
+              />
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="profile-picture-container">
+              <div class="name-container">
+                <p class="name">Sapir Madar</p>
+              </div>
+              <img
+                src="images/savpir-bride-pic.jpg"
+                alt="a profile picture with a circle background"
+                class="profile-picture"
+              />
+              <div class="review-stars">*****</div>
+            </div>
+            <div class="profile-picture-container">
+              <img
+                src="images/my-business-pic.jpg"
+                alt="a profile picture with a circle background"
+                class="profile-picture"
+              />
+            </div>
+            <div class="profile-picture-container">
+              <img
+                src="images/emily-wedding-pic.jpg"
+                alt="a profile picture with a circle background"
+                class="profile-picture"
+              />
+            </div>
+            <div class="profile-picture-container">
+              <img
+                src="images/my-business-pic.jpg"
+                alt="a profile picture with a circle background"
+                class="profile-picture"
+              />
+            </div>
+            <div class="profile-picture-container">
+              <img
+                src="images/tom-wedding-pic.jpg"
+                alt="a profile picture with a circle background"
+                class="profile-picture"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -114,16 +222,39 @@
       </div>
     </section>
 
+    <!---Including jquery because of owl-->
     <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
     ></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <!---owl carousel library script-->
 
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- calling the owl function-->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          items: 1,
+          margin: 10,
+          autoplay: false,
+          slideby: "page",
+          slideSpeed: 300,
+          paginationSpeed: 500,
+          smartSpeed: 1000, // duration of change of 1 slide
+          dots: false,
+          autowidth: false,
+
+          singleItem: true,
+          navigation: true,
+          scrollPerPage: true,
+          nav: true,
+          navText: [
+            "<i class='fa fa-chevron-left'></i>",
+            "<i class='fa fa-chevron-right'></i>",
+          ],
+        });
+      });
+    </script>
   </body>
 </html>
