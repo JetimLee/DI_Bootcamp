@@ -27,6 +27,15 @@ a {
 li {
   margin: 15px;
 }
+.logo {
+  display: contain;
+  width: 100px;
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .quoteContainer {
   margin-right: 100px;
@@ -38,6 +47,7 @@ li {
   display: flex;
   justify-content: space-evenly;
   width: 500px;
+  margin-left: 100px;
   align-items: center;
 }
 .button-primary {
@@ -61,25 +71,25 @@ li {
 .money-chart {
   width: 300px;
 }
-.paragraph-container {
-  margin-bottom: 100px;
-}
+
 .text-container {
   width: 400px;
+  align-self: center;
   white-space: nowrap;
+  margin-bottom: 125px;
 }
 .content-paragraph {
   line-height: 1.7;
   font-size: 13px;
 }
 .image-content-container {
-  align-self: center;
   margin-bottom: 125px;
 }
 .main-carousel-container {
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 80%;
 }
 
@@ -87,13 +97,22 @@ li {
   display: flex;
   /* flex-direction: column; */
   justify-content: center;
-  height: 200px;
+  height: 225px;
   width: 600px;
-  margin-top: -100px;
+  margin-top: -112.5px;
   display: absolute;
   -webkit-box-shadow: 0px 0px 10px 1px #eeeff1;
   box-shadow: 0px 0px 10px 1px #eeeff1;
   background-color: white;
+}
+.paragraph-container {
+  padding-top: 10px;
+}
+.profile-content-container {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .centering-container {
   display: flex;
@@ -111,33 +130,39 @@ li {
   padding-top: 10px;
   flex-direction: column;
   display: flex;
-  width: 100px;
-  margin: 0 10px;
+  width: 75px;
   align-items: center;
+  margin: 0 40px;
 }
 .profile-picture {
   object-fit: cover;
   width: 100%;
-  height: 100px;
-  margin: 20px;
+  height: 75px;
   border-radius: 50px;
 }
 .name {
   font-size: 12px;
 }
 .name-container {
-  margin-bottom: -10px;
-}
-.review-stars {
-  margin-top: -10px;
+  padding-bottom: 10px;
 }
 
 .review-card {
+  padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-
+.review-stars {
+  margin-top: 10px;
+  display: flex;
+}
+.fa-star {
+  color: #0455bf;
+  margin: 0 2px;
+  font-size: 12px;
+}
 /* company intro area */
 
 .services-info-section {
