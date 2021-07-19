@@ -39,7 +39,10 @@
         <div class="logo-container">
           <img class="logo" src="images/EcoMetrics Logo.png" alt="" />
         </div>
-        <ul>
+        <button id="hamburger" class="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul id="nav-menu">
           <li><a class="nav-link" href="#">Pricing</a></li>
           <li><a class="nav-link" href="#">Company</a></li>
           <li><a class="nav-link" href="#">Pricing</a></li>
@@ -595,6 +598,7 @@
       $(document).ready(function () {
         $(".owl-carousel").owlCarousel({
           items: 1,
+          responsiveClass: true,
           margin: 10,
           autoplay: false,
           slideby: "page",
