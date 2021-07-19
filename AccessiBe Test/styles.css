@@ -55,6 +55,7 @@ li {
   margin-right: 100px;
 }
 .nav-link {
+  cursor: pointer;
   color: black;
 }
 .logoAndCompanyInfo {
@@ -87,7 +88,6 @@ li {
 }
 
 .text-container {
-  width: 400px;
   align-self: center;
   white-space: nowrap;
   margin-bottom: 125px;
@@ -431,6 +431,9 @@ footer {
 /* media query for when to begin hamburger menu */
 
 @media screen and (max-width: 767px) {
+  .image-text-container {
+    width: 100%;
+  }
   #nav-menu {
     display: none;
   }
@@ -535,8 +538,7 @@ footer {
     margin: 0;
   }
   .text-container {
-    width: 400px;
-    align-self: center;
+    text-align: center;
     white-space: nowrap;
     margin-bottom: 0;
   }
@@ -781,15 +783,13 @@ footer {
   .quoteContainer {
     margin-right: 20px;
   }
-  .logoAndCompanyInfo {
-    width: 100%;
-  }
 }
 
 @media (max-width: 320px) {
   .money-chart {
     width: 200px;
   }
+
   .adjusted-header {
     font-size: 1rem;
     text-align: center;
@@ -822,5 +822,8 @@ footer {
   .social-media-icons {
     display: flex;
     justify-content: flex-start;
+  }
+  .text-container {
+    width: 100%;
   }
 }
