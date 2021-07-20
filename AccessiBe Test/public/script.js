@@ -30,6 +30,7 @@ userNumber.addEventListener("keyup", (e) => {
     userNumber.style.border = "1px solid red";
     userNumber.placeholder = "Please input only numbers";
   } else {
+    inputtedPhone = e.target.value;
     userNumber.style.border = "1px solid black";
   }
 });
@@ -64,6 +65,7 @@ const sendUserData = async () => {
       userEmail.value = "";
       userName.value = "";
       userNumber.value = "";
+      userNumber.placeholder = "Phone";
     }
 
     // console.log(localStorage);
