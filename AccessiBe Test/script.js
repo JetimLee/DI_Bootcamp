@@ -47,6 +47,7 @@ const sendUserData = async () => {
   const user = { inputtedEmail, inputtedName, inputtedPhone };
   console.log(user);
   try {
+    sendBtn.innerText = "Sending";
     const response = await fetch(url, {
       headers: {
         Accept: "application/json",
