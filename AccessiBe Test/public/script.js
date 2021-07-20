@@ -23,7 +23,6 @@ hamburger.addEventListener("click", () => {
 
 //storing user inputted data into global variables
 userNumber.addEventListener("keyup", (e) => {
-  console.log("working");
   let invalidChars = /[^0-9]/gi;
   if (invalidChars.test(e.target.value)) {
     e.target.value = e.target.value.replace(invalidChars, "");
@@ -45,7 +44,6 @@ userEmail.addEventListener("keyup", (e) => {
 const sendUserData = async () => {
   const url = " https://jsonplaceholder.typicode.com/users ";
   const user = { inputtedEmail, inputtedName, inputtedPhone };
-  console.log(user);
   try {
     sendBtn.innerText = "Sending";
     const response = await fetch(url, {
@@ -56,7 +54,6 @@ const sendUserData = async () => {
       method: "post",
       body: JSON.stringify(user),
     });
-    console.log(response.ok);
     const data = await response.json();
     console.log(data);
 
@@ -69,7 +66,6 @@ const sendUserData = async () => {
       userNumber.placeholder = "Phone";
     }
 
-    // console.log(localStorage);
     return data;
   } catch (error) {
     console.log(`an error occurred ${error}`);

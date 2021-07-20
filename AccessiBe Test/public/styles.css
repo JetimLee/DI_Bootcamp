@@ -413,17 +413,14 @@ footer {
   transition: all 0.5s ease;
   width: 20px;
 }
-
 .owl-prev {
   left: 0;
   bottom: 0;
 }
-
 .owl-next {
   right: 0;
   bottom: 0;
 }
-
 .owl-dots {
   display: none !important;
 }
@@ -434,9 +431,7 @@ footer {
 .owl-prev:hover {
   background-color: lightblue !important;
 }
-
 /* media query for when to begin hamburger menu as well as much of the default mobile styling */
-
 @media screen and (max-width: 767px) {
   .profile-content-container {
     padding: 0;
@@ -605,7 +600,7 @@ footer {
     font-size: 0.8rem;
   }
 }
-
+/*changing font size of top header and picture sizes in carousel */
 @media (max-width: 1060px) {
   .header {
     font-size: 2rem;
@@ -833,7 +828,6 @@ footer {
     margin: 2px;
   }
 }
-
 @media (max-width: 320px) {
   body {
     overflow-x: hidden;
