@@ -736,9 +736,7 @@ footer {
   .name {
     font-size: 0.5rem;
   }
-  .adjusted-header {
-    font-size: 0.8rem;
-  }
+
   .left-container {
     width: 100%;
     display: flex;
