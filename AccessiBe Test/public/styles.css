@@ -657,7 +657,6 @@ footer {
   }
   .form-bottom-container * {
     width: 100%;
-    margin: 0.5rem 0;
   }
   .form-top-container input {
     margin: 0.5rem 0;
@@ -705,7 +704,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
   }
   .form-bottom-container {
     display: flex;
@@ -714,6 +712,7 @@ footer {
   }
   .form-bottom-container * {
     width: 100%;
+    margin: 1rem 0;
     border: 1px solid black;
   }
   .form-top-container input {
