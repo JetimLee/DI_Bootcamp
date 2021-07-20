@@ -111,7 +111,7 @@ a {
   background-color: white;
 }
 .paragraph-container {
-  padding-top: 10px;
+  padding: 20px 0;
 }
 .profile-content-container {
   padding: 10px;
@@ -165,11 +165,12 @@ a {
 }
 
 .review-card {
-  padding: 20px 0;
+  padding: 10px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: fit-content;
 }
 .review-stars {
   margin-top: 10px;
@@ -437,6 +438,13 @@ footer {
 /* media query for when to begin hamburger menu as well as much of the default mobile styling */
 
 @media screen and (max-width: 767px) {
+  .profile-content-container {
+    padding: 0;
+  }
+  .paragraph-container {
+    font-size: 1rem;
+    padding: 5px 0;
+  }
   #nav-menu {
     display: none;
     flex-direction: column;
