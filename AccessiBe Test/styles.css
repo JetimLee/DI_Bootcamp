@@ -309,7 +309,7 @@ input:focus {
 
 footer {
   background-image: url("./images/better-background-accessibe.png");
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   background-position: center;
   background-size: auto 100%;
   margin: 0;
