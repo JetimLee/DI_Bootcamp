@@ -514,16 +514,13 @@
         <h1 class="adjusted-header">Get in touch with us</h1>
       </div>
       <div class="form-container">
-        <form method="POST">
+        <form id="userForm" method="POST" action="">
           <div class="form-top-container">
-            <input type="text" required placeholder="Name" /><input
-              type="email"
-              required
-              placeholder="Email"
-            />
+            <input id="userName" type="text" required placeholder="Name" />
+            <input id="userEmail" type="email" required placeholder="Email" />
           </div>
           <div class="form-bottom-container">
-            <input type="tel" placeholder="Phone" />
+            <input id="telephoneNumber" type="tel" placeholder="Phone" />
             <button id="send-btn" type="submit">Send</button>
           </div>
         </form>

@@ -1,9 +1,9 @@
+/* global reset */
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  overflow-x: hidden;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -297,6 +297,10 @@ form {
 }
 input {
   height: 30px;
+  border: 1px solid black;
+}
+input:focus {
+  outline: none;
 }
 
 .form-image-container {
@@ -402,8 +406,6 @@ footer {
   top: 10px;
   transition: all 0.5s ease;
   width: 20px;
-  /* height: 30px; */
-  /* margin: auto !important; */
 }
 
 .owl-prev {
@@ -695,6 +697,9 @@ footer {
   }
 }
 @media (max-width: 585px) {
+  .content-paragraph {
+    font-size: 1rem;
+  }
   form {
     display: flex;
     flex-direction: column;
@@ -780,7 +785,7 @@ footer {
     font-size: 1rem;
   }
   .content-paragraph {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   .image-content-container {
     width: 300px;
@@ -810,8 +815,27 @@ footer {
 }
 
 @media (max-width: 320px) {
+  body {
+    overflow-x: hidden;
+  }
   .money-chart {
     width: 200px;
+  }
+  .card {
+    padding: 0;
+    width: 260px;
+  }
+  .company-card-paragraph {
+    font-size: 0.7rem;
+  }
+  .company-card-header {
+    font-size: 0.9rem;
+  }
+  .content-paragraph {
+    font-size: 0.5rem;
+  }
+  .image-content-container {
+    width: fit-content;
   }
 
   .adjusted-header {
@@ -838,10 +862,16 @@ footer {
   }
   .right-container {
     display: flex;
+    width: fit-content;
+    padding: 0;
   }
   .social-media-link {
     padding: 2px;
     margin: 2px;
+  }
+  .left-container {
+    display: flex;
+    align-items: center;
   }
   .social-media-icons {
     display: flex;
