@@ -28,19 +28,18 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  padding: 10px;
   background-color: #e4edf2;
 }
 ul {
   display: flex;
   list-style: none;
+  justify-content: space-between;
+  width: 300px;
 }
 a {
   text-decoration: none;
 }
-li {
-  margin: 15px;
-}
+
 .logo {
   display: contain;
   width: 100px;
@@ -428,14 +427,21 @@ footer {
   background-color: lightblue !important;
 }
 
-/* media query for when to begin hamburger menu */
+/* media query for when to begin hamburger menu as well as much of the default mobile styling */
 
 @media screen and (max-width: 767px) {
-  .image-text-container {
-    width: 100%;
-  }
   #nav-menu {
     display: none;
+    flex-direction: column;
+  }
+  .quoteContainer {
+    display: flex;
+  }
+  .quoteContainer a {
+    padding: 5px;
+  }
+  #nav-menu.show {
+    display: flex;
   }
 
   .hamburger {
@@ -447,12 +453,14 @@ footer {
   }
   .logoAndCompanyInfo {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
   }
   .topNavBar {
     display: flex;
     justify-content: center;
+    height: 100%;
   }
   .image-text-container {
     padding-top: 20px;
@@ -461,6 +469,12 @@ footer {
     align-items: center;
     flex-direction: column;
     text-align: center;
+    width: 100%;
+  }
+  .text-container {
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 0;
   }
   #header {
     text-align: center;
@@ -473,6 +487,17 @@ footer {
 
     width: 80%;
   }
+  .carousel {
+    display: flex;
+    justify-content: center;
+    height: 225px;
+    width: 600px;
+    margin-top: -112.5px;
+    display: absolute;
+    -webkit-box-shadow: 0px 0px 10px 1px #eeeff1;
+    box-shadow: 0px 0px 10px 1px #eeeff1;
+    background-color: white;
+  }
   .card-container {
     display: flex;
     flex-direction: column;
@@ -481,8 +506,34 @@ footer {
     width: 100%;
     padding-top: 50px;
   }
+  .profile-picture-container {
+    padding-top: 10px;
+    flex-direction: column;
+    display: flex;
+    width: 40px;
+    align-items: center;
+    margin: 0 5px;
+  }
+  .profile-picture {
+    object-fit: cover;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+  }
+  .review-stars i {
+    font-size: 8px;
+    margin: 0;
+  }
+
+  .name {
+    font-size: 1rem;
+    text-align: center;
+  }
   .card {
     margin: 10px 0;
+  }
+  .company-card-paragraph {
+    font-size: 1rem;
   }
 
   input {
@@ -514,41 +565,7 @@ footer {
     align-items: center;
     justify-content: center;
   }
-  .main-carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .profile-picture-container {
-    padding-top: 10px;
-    flex-direction: column;
-    display: flex;
-    width: 40px;
-    align-items: center;
-    margin: 0 5px;
-  }
-  .profile-picture {
-    object-fit: cover;
-    width: 100%;
-    height: 40px;
-    border-radius: 20px;
-  }
-  .review-stars i {
-    font-size: 8px;
-    margin: 0;
-  }
-  .text-container {
-    text-align: center;
-    white-space: nowrap;
-    margin-bottom: 0;
-  }
-  .name {
-    font-size: 1rem;
-    text-align: center;
-  }
-  .company-card-paragraph {
-    font-size: 1rem;
-  }
+
   footer {
     padding: 10px;
   }
@@ -570,18 +587,6 @@ footer {
     align-items: flex-start;
     flex-direction: column;
     font-size: 0.8rem;
-  }
-  .carousel {
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    height: 225px;
-    width: 600px;
-    margin-top: -112.5px;
-    display: absolute;
-    -webkit-box-shadow: 0px 0px 10px 1px #eeeff1;
-    box-shadow: 0px 0px 10px 1px #eeeff1;
-    background-color: white;
   }
 }
 
@@ -756,7 +761,7 @@ footer {
     margin-top: 1rem;
   }
 }
-@media (max-width: 440px) {
+@media (max-width: 455px) {
   .profile-picture-container {
     padding-top: 10px;
     flex-direction: column;
@@ -782,6 +787,25 @@ footer {
   }
   .quoteContainer {
     margin-right: 20px;
+    display: flex;
+  }
+  .topNavBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #nav-menu.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #nav-menu.show li {
+    margin: 10px 0;
+  }
+  .topNavBar * {
+    margin: 2px;
   }
 }
 
@@ -825,5 +849,30 @@ footer {
   }
   .text-container {
     width: 100%;
+  }
+  .quoteContainer {
+    margin: 0;
+    padding: 0;
+  }
+  .logoAndCompanyInfo {
+    margin: 0;
+  }
+  .topNavBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #nav-menu.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #nav-menu.show li {
+    margin: 10px 0;
+  }
+  .topNavBar * {
+    margin: 2px;
   }
 }
