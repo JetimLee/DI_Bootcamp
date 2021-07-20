@@ -77,7 +77,7 @@ a {
   font-size: 3rem;
 }
 .money-chart {
-  width: 300px;
+  width: 400px;
 }
 .text-container {
   align-self: center;
@@ -606,7 +606,13 @@ footer {
   }
 }
 
-@media (max-width: 1101px) {
+@media (max-width: 1060px) {
+  .header {
+    font-size: 2rem;
+  }
+  .money-chart {
+    width: 300px;
+  }
   .profile-picture-container {
     padding-top: 10px;
     flex-direction: column;

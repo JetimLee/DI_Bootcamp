@@ -74,10 +74,10 @@ a {
   align-items: center;
 }
 .header {
-  font-size: 32px;
+  font-size: 3rem;
 }
 .money-chart {
-  width: 300px;
+  width: 400px;
 }
 .text-container {
   align-self: center;
@@ -86,7 +86,7 @@ a {
 }
 .content-paragraph {
   line-height: 1.7;
-  font-size: 13px;
+  font-size: 1rem;
 }
 .image-content-container {
   margin-bottom: 125px;
@@ -606,7 +606,13 @@ footer {
   }
 }
 
-@media (max-width: 1101px) {
+@media (max-width: 1060px) {
+  .header {
+    font-size: 2rem;
+  }
+  .money-chart {
+    width: 300px;
+  }
   .profile-picture-container {
     padding-top: 10px;
     flex-direction: column;
