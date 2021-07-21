@@ -1,15 +1,11 @@
 const reverseInt = (n) => {
-  if (n.toString().split("").length === 0) {
-    console.log(n);
-    return;
-  }
-  const stringOfNumbers = n.toString().split("").reverse().join("");
-  //have to convert the number first to a a string, then the process is the same as reversing a string
-  console.log(stringOfNumbers);
+  let reversedNumber = n.toString().split("").reverse().join("");
+
+  return parseInt(reversedNumber) * Math.sign(n);
+  //if the number entered is a negative, math.sign will give you -1, if it's positive it will give you 1
 };
 
-reverseInt(15);
-reverseInt(1);
-reverseInt(0);
-reverseInt(-2);
-reverseInt(-20);
+console.log(reverseInt(15));
+console.log(reverseInt(-51));
+console.log(reverseInt(-5));
+console.log(reverseInt(500));
